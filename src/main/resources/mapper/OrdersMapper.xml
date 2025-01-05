@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dragonhope.mapper.OrdersMapper">
+
+    <resultMap id="BaseResultMap" type="dragonhope.domain.Orders">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="modelId" column="model_id" jdbcType="INTEGER"/>
+            <result property="materialId" column="material_id" jdbcType="INTEGER"/>
+            <result property="openCloseId" column="open_close_id" jdbcType="INTEGER"/>
+            <result property="length" column="length" jdbcType="INTEGER"/>
+            <result property="quantity" column="quantity" jdbcType="INTEGER"/>
+            <result property="profitRate" column="profit_rate" jdbcType="DECIMAL"/>
+            <result property="totalPrice" column="total_price" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,model_id,material_id,
+        open_close_id,length,quantity,
+        profit_rate,total_price
+    </sql>
+</mapper>
